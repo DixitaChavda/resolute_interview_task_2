@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +14,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.buttonPrimary{
+  background-image: linear-gradient(to right bottom, #002365, #21e287) !important ;
+}
+
+.wave{
+  background-image: url('./assets/download.svg');
+  bottom: 0;
+   height: 100px;
+  z-index: 1;
+}
+
+.cardCon{
+  grid-template-columns: repeat(4, 253px)
+}
+.footer{
+  grid-template-columns: repeat(3,337px)
+}
+
+
