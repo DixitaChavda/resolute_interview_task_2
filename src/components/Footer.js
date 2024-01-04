@@ -1,184 +1,157 @@
 import React from "react";
 import Container from "../layouts/Container";
+import {
+  APPLICATIONS,
+  CITIES,
+  COUNTRIES,
+  GET_IN_TOUCH,
+  IMAGES,
+  IMAGES_2,
+  PRODUCTS,
+  QUICK_LINKS,
+  WEB_ICONS,
+} from "../constants";
 
 const Footer = () => {
   return (
     <div className="bg-dark-100 text-white ">
       <Container>
-        <div className="grid grid-col-3 footer pt-[50px] pb-[30px]">
+        <div className="grid grid-col-3 gap-5 footer pt-50 pb-30">
           <div className="col-span-1">
             <h1 className="text-2xl font-bold mb-2">Applications</h1>
             <ul>
-              <li className="py-[7.5px]">Fine Dine POS</li>
-              <li className="py-[7.5px]">Pizzeria POS</li>
-              <li className="py-[7.5px]">Ice cream parlour POS</li>
-              <li className="py-[7.5px]">Food Trucks POS</li>
-              <li className="py-[7.5px]">Quick Serve Restaurants POS</li>
-              <li className="py-[7.5px]">Bars & Pubs POS</li>
-              <li className="py-[7.5px]">Bakery & Confectionery POS</li>
-              <li className="py-[7.5px]">Cake & launges POS</li>
+              {APPLICATIONS &&
+                APPLICATIONS.length > 0 &&
+                APPLICATIONS.map(({ title, id }, ind) => {
+                  return (
+                    <div key={id} className=" flex items-center gap-3">
+                      <i className="fas fa-angle-right"></i>
+                      <li className="py-7.5">{title}</li>
+                    </div>
+                  );
+                })}
             </ul>
           </div>
           <div className="col-span-1">
             <h1 className="text-2xl font-bold mb-2">Products</h1>
             <ul>
-              <li className="py-[7.5px]">ReANALYSE - Reporting App</li>
-              <li className="py-[7.5px]">ReECHO - Feedback App</li>
-              <li className="py-[7.5px]">TabMyOrder - Realtime Ordering App</li>
+              {PRODUCTS &&
+                PRODUCTS.length > 0 &&
+                PRODUCTS.map(({ id, title }, ind) => {
+                  return (
+                    <div key={id} className=" flex items-center gap-3">
+                      <i className="fas fa-angle-right"></i>
+                      <li className="py-7.5">{title}</li>
+                    </div>
+                  );
+                })}
             </ul>
             <h1 className="text-2xl font-bold mb-2">Quick Links</h1>
             <ul>
-              <li className="py-[7.5px]">RestroTrail</li>
-              <li className="py-[7.5px]">Carrer</li>
-              <li className="py-[7.5px]">Integration</li>
-              <li className="py-[7.5px]">Partners</li>
+              {QUICK_LINKS &&
+                QUICK_LINKS.length > 0 &&
+                QUICK_LINKS.map(({ id, title }, ind) => {
+                  return (
+                    <div key={id} className=" flex items-center gap-3">
+                      <i className="fas fa-angle-right"></i>
+
+                      <li className="py-7.5">{title}</li>
+                    </div>
+                  );
+                })}
             </ul>
           </div>
           <div className="col-span-1">
             <h1 className="text-2xl font-bold mb-2">Get In Touch</h1>
             <ul>
-              <li className="py-[7.5px] flex items-center gap-2">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>{" "}
-                <h1>Visit Us</h1>
-              </li>
-              <li className="py-[7.5px] flex items-center gap-2">
-                <i class="fa-solid fa-phone"></i>
-                <h1>Visit Us</h1>
-              </li>
-              <li className="py-[7.5px] flex items-center gap-2">
-                <i class="fa-solid fa-envelope"></i>
-                <h1>info@re-pos.in</h1>
-              </li>
-              <li className="py-[7.5px] flex items-center gap-2">
-                <i class="fa-solid fa-star"></i>
-                <h1>Google Review </h1>
-              </li>
+              {GET_IN_TOUCH &&
+                GET_IN_TOUCH.length > 0 &&
+                GET_IN_TOUCH.map(({ icon, id, title }, index) => {
+                  return (
+                    <li key={index} className="py-7.5 flex items-center gap-10">
+                      <i class={icon}></i> <h1>{title}</h1>
+                    </li>
+                  );
+                })}
             </ul>
-            <h1 className="text-2xl font-bold mb-2">Applications</h1>
-            <ul className="flex items-center gap-3 my-3">
-              <span className="px-2 py-1 border border-white rounded-full">
-                <i class="fa-solid fa-phone"></i>
-              </span>
-              <span className="px-2 py-1 border border-white rounded-full">
-                <i class="fa-brands fa-linkedin"></i>
-              </span>
-              <span className="px-2 py-1 border border-white rounded-full">
-                <i class="fa-brands fa-instagram"></i>
-              </span>
-              <span className="px-2 py-1 border border-white rounded-full">
-                <i class="fa-brands fa-whatsapp"></i>
-              </span>
+
+            <ul className="flex items-center gap-3 my-3.75">
+              {WEB_ICONS &&
+                WEB_ICONS.length > 0 &&
+                WEB_ICONS.map(({ id, icon }, index) => {
+                  return (
+                    <span
+                      key={id}
+                      className="px-10 py-1.5 border border-white rounded-full"
+                    >
+                      <i class={icon}></i>
+                    </span>
+                  );
+                })}
             </ul>
-            <div className="flex items-center gap-3 my-3">
-              <img
-                className="w-7"
-                src="https://re-pos.in/wp-content/uploads/2020/12/india.png"
-                alt=""
-              />
-              <img
-                className="w-7"
-                src="https://re-pos.in/wp-content/uploads/2020/12/ghana.png"
-                alt=""
-              />
-              <img
-                className="w-7"
-                src="https://re-pos.in/wp-content/uploads/2020/12/kuwait.png"
-                alt=""
-              />
+            <div className="flex items-center gap-6.25 my-3.75">
+              {IMAGES &&
+                IMAGES.length > 0 &&
+                IMAGES.map(({ id, image }, ind) => {
+                  return (
+                    <img
+                      key={id}
+                      className="w-[30px] h-[30px]"
+                      src={image}
+                      alt="flag"
+                    />
+                  );
+                })}
             </div>
-            <div className="flex items-center gap-3 my-3">
-              <img
-                className="w-7"
-                src="https://re-pos.in/wp-content/uploads/2020/12/india.png"
-                alt=""
-              />
-              <img
-                className="w-7"
-                src="https://re-pos.in/wp-content/uploads/2020/12/ghana.png"
-                alt=""
-              />
-              <img
-                className="w-7"
-                src="https://re-pos.in/wp-content/uploads/2020/12/kuwait.png"
-                alt=""
-              />
+            <div className="flex items-center gap-[17px] my-15">
+              {IMAGES_2 &&
+                IMAGES_2.length > 0 &&
+                IMAGES_2.map(({ id, image }, ind) => {
+                  return (
+                    <img className="w-[30px] h-[30px]" src={image} alt="flag" />
+                  );
+                })}
             </div>
           </div>
-         
         </div>
-        </Container>
-        <div className="border-b w-full border-white"></div>
-        <Container>
+      </Container>
+      <div className="border-b w-full border-white"></div>
+      <Container>
         <div className="flex justify-center items-center">
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            India
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Ahmedabad
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            goa
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Hyderabad
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Mumbai
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Pune
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Surat
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Vadodara
-          </li>
+          {CITIES &&
+            CITIES.length > 0 &&
+            CITIES.map(({ id, title }, index) => {
+              return (
+                <li
+                  key={id}
+                  className="py-10 list-none text-base font-normal px-4.25"
+                >
+                  {title}
+                </li>
+              );
+            })}
         </div>
         <div className="mb-5"> </div>
         <div className="flex justify-center items-center">
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            India
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Ahmedabad
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            goa
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Hyderabad
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Mumbai
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Pune
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Surat
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Vadodara
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Vadodara
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Vadodara
-          </li>
-          <li className="py-[10px] list-none text-base font-normal px-[13px]">
-            Vadodara
-          </li>
+          {COUNTRIES &&
+            COUNTRIES.length > 0 &&
+            COUNTRIES.map(({ id, title }, index) => {
+              return (
+                <li
+                  key={id}
+                  className="py-10 list-none text-base font-normal px-4.25"
+                >
+                  {title}
+                </li>
+              );
+            })}
         </div>
+      </Container>
 
-        </Container>
-       
-        <div className="border-b border-white"></div>
-        <div className="flex justify-center p-5 font-normal">
-          <p>© 2024 All Rights Reserved by RePOS.</p>
-        </div>
-     
+      <div className="border-b border-white"></div>
+      <div className="flex justify-center p-5 font-normal">
+        <p>© 2024 All Rights Reserved by RePOS.</p>
+      </div>
     </div>
   );
 };

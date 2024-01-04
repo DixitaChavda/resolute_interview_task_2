@@ -2,6 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+  
+      backgroundPosition: {
+        bottom :"bottom center"
+      },
+
     extend: {
       colors:{
         base:{
@@ -24,6 +29,17 @@ module.exports = {
         card:"6px 6px 18px 0px rgba(0,0,0,0.2)"
 
       },
+      spacing: {
+        "1.5":"6px",
+        "4.25":"13px",
+        "7.5": '7.5px',
+        "10":"10px",
+        "50":"50px",
+        "3.75":"15px",
+        "6.25":"17px",
+        "30":"30px",
+        "12.5":"54px",
+      }
     
    
     

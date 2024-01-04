@@ -5,42 +5,42 @@ const Repos = () => {
   return (
     <div className=" ">
       <Container>
-        <div className="flex my-[30px]">
-          <div className="w-[47%] mr-[5.5%] py-[30px]">
+        <div className="flex my-30">
+          <div className="w-[47%] mr-[5.5%] py-30">
             <div className="flex  flex-col">
               <div className="flex justify-between py-[5%]">
-                <div className="p-[50px] w-[44%]  rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
-                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-[10px]">
+                <div className="self-start p-50 w-[44%]  rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
+                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-10">
                     7+
                   </h1>
                   <h2 className="text-lg font-normal pb-0 text-white">
                     Countries
                   </h2>
                 </div>
-                <div className="p-[50px] w-[44%]   rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
-                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-[10px]">
-                    7+
+                <div className="self-end mt-50 p-50 w-[44%]   rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
+                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-10">
+                    50+
                   </h1>
                   <h2 className="text-lg font-normal pb-0 text-white">
-                    Countries
+                    Cities
                   </h2>
                 </div>
               </div>
               <div className="flex  justify-between  py-[5%]">
-                <div className="p-[50px] w-[44%]  rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
-                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-[10px]">
-                    7+
+                <div className="self-start p-50 w-[44%]  rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
+                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-10">
+                    100+
                   </h1>
                   <h2 className="text-lg font-normal pb-0 text-white">
-                    Countries
+                    Features
                   </h2>
                 </div>
-                <div className="p-[50px] w-[44%] rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
-                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-[10px]">
-                    7+
+                <div className="self-start mt-50 p-50 w-[44%] rounded-lg text-center shadow-box buttonPrimary bg-buttonPrimary">
+                  <h1 className="leading-[1.4em] font-medium text-[42px] text-white pb-10">
+                    150+
                   </h1>
                   <h2 className="text-lg font-normal pb-0 text-white">
-                    Countries
+                    Outlets
                   </h2>
                 </div>
               </div>
@@ -48,7 +48,7 @@ const Repos = () => {
           </div>
           <div className="w-[47%] ">
             <div className="mb-[5%]">
-              <h1 className="text-[35px] text-left leading-[1.4em] pb-[10px]">
+              <h1 className="pt-20 text-[35px] text-left leading-[1.4em] pb-[10px]">
                 What is <strong>RePOS</strong>?
               </h1>
               <img
@@ -71,7 +71,7 @@ const Repos = () => {
                 / Juice Centers, Food Chains, Pizza Chains, Delivery Kitchen,
                 Food Trucks and soon!
               </p>
-            </div>      
+            </div>
 
             <button className="bg-dark-100 py-4 px-7 rounded-xl text-white hover:bg-transparent hover:border hover:border-dark-100 hover:text-dark-100">
               Know More
